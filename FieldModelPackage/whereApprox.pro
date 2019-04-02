@@ -1,0 +1,1 @@
+Function whereApprox,vec,val;,all=all;IF n_elements(all) eq 0 THEN all=0IF n_elements(val) ne 1 THEN stopidx=where(abs(vec-val(0)) eq min(abs(vec-val(0)),/nan),is);IF is ne 1 THEN stopIF is eq 0 THEN idx=-1IF n_elements(idx) eq 1 THEN idx=idx[0]return,idxEND

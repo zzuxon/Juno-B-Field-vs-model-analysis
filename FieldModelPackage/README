@@ -1,0 +1,9 @@
+This package solves for the magnetic field components in Jupiter's magnetosphere.
+
+Compile by calling @prepFunctions.
+
+The main function is found in jovMagField.pro.  The current available models are ‘VIP4’, ‘VIT4’, ‘VIPAL’, ‘Khurana’, ‘CANSheet,’ and ‘JM09’.  See comments in that file for use.
+
+footpoint.pro is used to do magnetic field line tracings.
+
+Use ctimeOfDPLT.pro to get a default time to use in Khurana model.

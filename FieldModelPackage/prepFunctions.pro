@@ -1,0 +1,11 @@
+.r vecgen
+.r whereApprox
+.r dPdtheta
+.r dPdtheta2
+.r getLegendre
+.r getLegendre2  
+.r getSchmidtCoefs
+.r FBfield
+.r ctimeOfDPLT
+.r kk_2009
+.r jovMagField

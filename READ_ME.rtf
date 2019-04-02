@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww19620\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Comparing Juno\'92s Magnetic Field Measurements to existing models: The code pipeline tutorial.\
+By Cooper Wooten.\
+\
+This is a step by step guide use the set of codes across IDL and Python, in order to produce plots which compare Juno magnetic field measurements to models.\
+\
+Step 0: Download relevant files.\
+ You will need the Field Model package, a set of IDL programs. If you cannot acquire them, and I have not setup some manner of hosting for them, contact Parker Hinton. You will want to use my edition of Parker\'92s code \'93lines_at_Io_magB.pro\'94. My version is \'93lines_at_Io_magB - Cooper edition.pro\'94. I know that Parker has this code, but I am not sure whether or not he included it in his Field Model Package. This package must also include \'93fgm_b_spherical.pro\'94, a program written by Rob Wilson. You will also, of course, need to Download the Data you\'92re analyzing. The data this code is made for can be fond here:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://pds-ppi.igpp.ucla.edu/search/view/?f=yes&id=pds://PPI/JNO-J-3-FGM-CAL-V1.0/DATA/JUPITER/PC"}}{\fldrslt \cf0 https://pds-ppi.igpp.ucla.edu/search/view/?f=yes&id=pds://PPI/JNO-J-3-FGM-CAL-V1.0/DATA/JUPITER/PC}}\
+\
+Step 1: Identify relevant Data.\
+The Data is presented in distinct files, with each file representing one day of year. The model being examined with this code, JRM09, is only considered reliable or useful within around 40 Jupiter radii. Therefore, it is necessary to identify the data points that were taken within 40 rJ. For this purpose, I wrote the code \'93less than 40 finder.ipynb\'94. That is where you must first go. See the comments on that file to understand it\'92s use, then return to this file.\
+\
+Step 2: IDL time.\
+Despite the name, Step 2 does not involve opening IDL immediately. First, one must go to my file \'93position extraction.ipynb\'94. See the comments on that file, then return.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ri-10259\pardirnatural\partightenfactor0
+\cf0 Now that you\'92ve returned, it is time to open IDL. Once the program is open, you must take the following steps in order:\
+1. Get in the directory that puts you within the FieldModelPackage.\
+2. In the command line, write @prepFunctions and run it.\
+3. Open and compile the following files in the following order: jovMagField.pro, footprint.pro, fgm_b_spherical.pro, and lines_at_Io_magB - Cooper edition.pro.\
+\
+Having done this, go to lines_at_Io_magB - Cooper edition.pro and see my comments. You will now have all the required files for the final step.\
+\
+Step 3: Plotcraft.\
+Go to \'93magneto model comparison.ipynb\'94. See my comments there.\
+Congratulations, you now understand the framework of how to use these plots. \
+\
+}
